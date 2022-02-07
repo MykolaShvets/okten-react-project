@@ -16,14 +16,13 @@ const MovieListCard: FC<{ movie: IMovie }> = ({movie}) => {
 
     return (
         <div className={'movie-list-card__wrapp'}>
-            <div className={'movie__poster'}>
-                <img src={imageUrl + poster_path} alt={title}/>
-            </div>
-            <Link to={id.toString()} >
+            <Link to={id.toString()}>
+                <div className={'movie__poster'}>
+                    <img src={imageUrl + poster_path} alt={title}/>
+                </div>
                 <div className={'movie__info'}>
                     <h4 className={'movie__title'}>{title}</h4>
                     <h6 className={'movie__rating'}>{vote_average}</h6>
-                    <p className={'label'}>Click for detail</p>
                 </div>
             </Link>
 

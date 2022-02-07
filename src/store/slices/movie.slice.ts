@@ -6,19 +6,19 @@ import {movieService} from "../../services";
 interface IMovieState {
     movie: IMovie | null;
     movies: IMovieList | null;
-    page: number;
+    currentPg: number;
 }
 
 const initialState: IMovieState = {
     movie: null,
     movies: null,
-    page: 1
+    currentPg: 1
 };
 
 export const getMovies = createAsyncThunk(
     'movieSlice/getMovies',
-    async (_, {dispatch}) => {
-        const {data} = await movieService.getAll();
+    async (page: number, {dispatch}) => {
+        const {data} = await movieService.getAll(page);
         dispatch(SET_MOVIES({movies: data}));
     }
 );
@@ -41,7 +41,10 @@ const movieSlice = createSlice({
         },
         SET_MOVIE: (state, action: PayloadAction<{ movie: IMovie }>) => {
             state.movie = action.payload.movie
-        }
+        },
+        PG_CHANGE: (state, action:PayloadAction<number>) => {
+            state.currentPg = action.payload;
+        },
 
     }
 });
@@ -51,4 +54,4 @@ const movieReducer = movieSlice.reducer;
 
 export default movieReducer;
 
-export const {SET_MOVIES, SET_MOVIE} = movieSlice.actions;
+export const {SET_MOVIES, SET_MOVIE, PG_CHANGE} = movieSlice.actions;
