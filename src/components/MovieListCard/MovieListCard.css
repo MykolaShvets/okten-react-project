@@ -15,7 +15,7 @@
 
 .movie__info{
     width: 250px;
-    height: 100px;
+    height: 150px;
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -26,12 +26,22 @@
 }
 
 .movie-list-card__wrapp:hover{
-    box-shadow: 0 0 60px 40px #041b3a;
+    box-shadow: 0 0 60px 40px rgba(4, 27, 58, 0.70);
     z-index: 2;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 
-.movie-list-card__wrapp:hover .label{
-    top: 160px;
+.movie-list-card__genres{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+.movie-list-card__genres p{
+    padding: 3px;
+    background: #00032c;
+    border-radius: 5px;
+    font-size: 12px;
 }

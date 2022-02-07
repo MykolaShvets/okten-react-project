@@ -1,17 +1,24 @@
 import React, {FC} from 'react';
 import {Link} from "react-router-dom";
+import {Rating} from "@mui/material";
+import {StarBorder} from "@mui/icons-material";
 
 import './MovieListCard.css'
-import {IMovie} from "../../interfaces";
+import {IGenre, IMovie} from "../../interfaces";
 import {imageUrl} from "../../constants/urls";
-import {useAppDispatch} from "../../hooks/redux";
+import {useAppSelector} from "../../hooks/redux";
 
 const MovieListCard: FC<{ movie: IMovie }> = ({movie}) => {
 
-    const {id, title, poster_path, vote_average, overview} = movie;
+    const {id, title, poster_path, vote_average, genre_ids} = movie;
 
+    const {genres} = useAppSelector(state => state.genreReducer)
 
-    const dispatch = useAppDispatch();
+    let currentGenres: IGenre[] = [];
+
+    {
+        genre_ids && genre_ids.map(genre_id => genres.filter(genre => genre.id === genre_id).map(genre => currentGenres.push(genre)))
+    }
 
 
     return (
@@ -22,7 +29,14 @@ const MovieListCard: FC<{ movie: IMovie }> = ({movie}) => {
                 </div>
                 <div className={'movie__info'}>
                     <h4 className={'movie__title'}>{title}</h4>
-                    <h6 className={'movie__rating'}>{vote_average}</h6>
+                    <div className={"movie-list-card__genres"}>
+                        {currentGenres.map(genre => <p key={genre.id}>{genre.name}</p>)}
+                    </div>
+                    <Rating value={vote_average}
+                            readOnly max={10}
+                            size={'small'}
+                            emptyIcon={<StarBorder sx={{color: '#ffffff'}} fontSize="inherit"/>}
+                    />
                 </div>
             </Link>
 

@@ -1,20 +1,48 @@
-.current-movie__wrapp{
+.current-movie__wrapp {
     max-width: 1440px;
     margin: 0 auto;
     padding: 10px;
     display: flex;
+    align-items: flex-start;
     gap: 30px;
+    height: calc(100vh - 80px);
+    background: rgba(0, 3, 44, 0.7);
 }
 
-.current-movie__poster img{
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+.current-movie__poster img {
     width: 450px;
     border-radius: 10px;
 }
 
-.current-movie__genres{
+.current-movie__titles {
+    margin-bottom: 60px;
+}
+
+.current-movie__titles h2 {
+    font-size: 30px;
+}
+
+.current-movie__genres,
+.current-movie__creators{
     display: flex;
     align-items: flex-end;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 3px 10px;
+    margin: 15px 0;
 }
 
 
