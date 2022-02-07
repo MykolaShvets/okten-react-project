@@ -1,0 +1,21 @@
+.current-movie__wrapp{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    gap: 30px;
+}
+
+.current-movie__poster img{
+    width: 450px;
+    border-radius: 10px;
+}
+
+.current-movie__genres{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+
+

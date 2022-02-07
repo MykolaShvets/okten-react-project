@@ -1,0 +1,53 @@
+.movie-list-card__wrapp{
+    width: 250px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: transparent;
+    transition: all ease .1s;
+}
+
+.movie__poster img{
+    width: 250px;
+}
+
+
+.movie__info{
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.68);
+    color: white;
+    padding: 20px;
+    transition: all linear .1s;
+}
+
+.label{
+
+    width: 250px;
+    position: absolute;
+    z-index: 2;
+    bottom: -20px;
+    text-align: center;
+
+
+}
+
+.movie-list-card__wrapp:hover{
+    box-shadow: 0 0 60px 40px #041b3a;
+    z-index: 2;
+    transform: scale(1.2);
+}
+
+.movie-list-card__wrapp:hover .movie__info{
+    height: 100%;
+
+}
+
+.movie-list-card__wrapp:hover .label{
+    top: 160px;
+}

@@ -1,0 +1,19 @@
+.movies-page__wrapp{
+    max-width: 1420px;
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+}
+
+.movies-page__sidebar{
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 200px;
+    border-right: 1px solid black;
+}
+
+.movie-page__content{
+    padding-top: 40px;
+    width: 1200px;
+}

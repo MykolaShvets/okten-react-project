@@ -1,0 +1,29 @@
+.header__wrapp{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: #000322;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu__item a{
+    font-size: 24px;
+    font-weight: bold;
+    transition: all ease .5s;
+}
+.menu__item a:hover{
+    color: red;
+}
+
+.menu__item .active{
+    color: red;
+}
