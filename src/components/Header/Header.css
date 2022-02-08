@@ -1,10 +1,16 @@
+.header{
+
+    background: #000322;
+}
+
 .header__wrapp{
+    height: 80px;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 80px;
-    background: #000322;
+    justify-content: space-between;
     color: white;
 }
 
@@ -19,11 +25,16 @@
     font-size: 24px;
     font-weight: bold;
     transition: all ease .5s;
+    padding: 5px 10px;
 }
 .menu__item a:hover{
-    color: red;
+    color: #5468ab;
 }
 
 .menu__item .active{
-    color: red;
+    color: #5468ab;
+}
+
+.header__back button{
+    font-size: 20px;
 }

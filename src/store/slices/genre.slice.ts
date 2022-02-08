@@ -29,7 +29,7 @@ const genreSlice = createSlice({
     initialState,
     reducers:{
         SET_GENRES: (state, action: PayloadAction<{genres: IGenre[]}>) => {
-            state.genres = action.payload.genres
+            state.genres = [{id:0, name: 'All'}, ...action.payload.genres]
 
         }
     }

@@ -7,6 +7,7 @@ import './MovieListCard.css'
 import {IGenre, IMovie} from "../../interfaces";
 import {imageUrl} from "../../constants/urls";
 import {useAppSelector} from "../../hooks/redux";
+import {GenreBadge} from "../GenresBadge/GenreBadge";
 
 const MovieListCard: FC<{ movie: IMovie }> = ({movie}) => {
 
@@ -23,14 +24,14 @@ const MovieListCard: FC<{ movie: IMovie }> = ({movie}) => {
 
     return (
         <div className={'movie-list-card__wrapp'}>
-            <Link to={id.toString()}>
+            <Link to={`/movies/${id.toString()}`}>
                 <div className={'movie__poster'}>
                     <img src={imageUrl + poster_path} alt={title}/>
                 </div>
                 <div className={'movie__info'}>
                     <h4 className={'movie__title'}>{title}</h4>
                     <div className={"movie-list-card__genres"}>
-                        {currentGenres.map(genre => <p key={genre.id}>{genre.name}</p>)}
+                        {currentGenres.map(genre => <GenreBadge key={genre.id} genre={genre}/>)}
                     </div>
                     <Rating value={vote_average}
                             readOnly max={10}

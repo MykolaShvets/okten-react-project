@@ -39,9 +39,4 @@
     flex-wrap: wrap;
 }
 
-.movie-list-card__genres p{
-    padding: 3px;
-    background: #00032c;
-    border-radius: 5px;
-    font-size: 12px;
-}
+

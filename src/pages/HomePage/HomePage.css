@@ -1,0 +1,19 @@
+.home-page__wrapp{
+    max-width: 1440px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.home-page__wrapp h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.upcoming,
+.top-rated,
+.popular{
+    margin-top: 50px;
+
+}

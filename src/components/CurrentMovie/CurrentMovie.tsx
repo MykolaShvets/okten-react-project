@@ -1,7 +1,5 @@
 import React, {FC, useEffect} from 'react';
 import {useParams} from "react-router-dom";
-import {Rating} from "@mui/material";
-import {StarBorder} from "@mui/icons-material";
 
 import './CurrentMovie.css'
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
@@ -47,11 +45,6 @@ const CurrentMovie: FC = () => {
                 </div>
                 <div className="current-movie__rating">
                     <h3>Rating: {movie?.vote_average} / Votes: {movie?.vote_count}.</h3>
-                    <Rating value={movie?.vote_average}
-                            readOnly max={10}
-                            size={'medium'}
-                            emptyIcon={<StarBorder sx={{color: '#ffffff'}} fontSize="inherit"/>}
-                    />
                 </div>
                 <div className={'current-movie__creators'}>
                     <h3>Creators:</h3>

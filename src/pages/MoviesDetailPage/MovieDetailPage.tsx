@@ -6,7 +6,7 @@ const MovieDetailPage: FC = () => {
 
     return (
         <div>
-<CurrentMovie/>
+            <CurrentMovie/>
         </div>
     );
 };
