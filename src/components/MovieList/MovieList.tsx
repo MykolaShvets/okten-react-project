@@ -39,7 +39,8 @@ const MovieList: FC = () => {
 
                 {currentPg > 1 ? <p>{`<<  ${currentPg}  >>`}</p> : '<< 1 >>'}
 
-                <button onClick={() => dispatch(PG_CHANGE(currentPg + 1))}>{(currentPg + 1) + ' >>'}</button>
+                <button onClick={() => dispatch(PG_CHANGE(currentPg + 1))}
+                        disabled={currentPg === 500}>{(currentPg + 1) + ' >>'}</button>
 
                 <button onClick={() => dispatch(PG_CHANGE(500))}
                         className={'last-pg__btn'}>...500
