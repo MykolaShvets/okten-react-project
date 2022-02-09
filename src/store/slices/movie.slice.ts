@@ -24,56 +24,86 @@ const initialState: IMovieState = {
 export const getMovies = createAsyncThunk(
     'movieSlice/getMovies',
     async (page: number, {dispatch}) => {
-        const {data} = await movieService.getAll(page);
-        dispatch(SET_MOVIES({movies: data}));
+        try {
+            const {data} = await movieService.getAll(page);
+            dispatch(SET_MOVIES({movies: data}));
+            return
+        } catch (e: any) {
+            console.log(e.message)
+        }
     }
 );
 
 export const getCurrentMovie = createAsyncThunk<void, string>(
     'movieSlice/getCurrentMovie',
     async (movieId, {dispatch}) => {
-        const {data} = await movieService.getById(movieId);
-        dispatch(SET_MOVIE({movie: data}));
+        try {
+            const {data} = await movieService.getById(movieId);
+            dispatch(SET_MOVIE({movie: data}));
+            return
+        } catch (e: any) {
+            console.log(e.message)
+        }
     }
 )
 
 export const getUpcomingMovie = createAsyncThunk(
     'movieSlice/getUpcomingMovie',
     async (_, {dispatch}) => {
-        const {data} = await movieService.getUpcoming()
-        const {results} = data
-        dispatch(SET_UPCOMING({upcoming: results}))
+        try {
+            const {data} = await movieService.getUpcoming()
+            const {results} = data
+            dispatch(SET_UPCOMING({upcoming: results}))
+            return
+        } catch (e: any) {
+            console.log(e.message)
+        }
     }
 )
 
 export const getTopRatedMovie = createAsyncThunk(
     'movieSlice/getTopRatedMovie',
     async (_, {dispatch}) => {
-        const {data} = await movieService.getTopRated()
-        const {results} = data
-        dispatch(SET_TOP_RATED({topRated: results}))
+        try {
+            const {data} = await movieService.getTopRated()
+            const {results} = data
+            dispatch(SET_TOP_RATED({topRated: results}))
+            return
+        } catch (e: any) {
+            console.log(e.message)
+        }
     }
 )
 
 export const getPopularMovie = createAsyncThunk(
     'movieSlice/getUpcomingMovie',
     async (_, {dispatch}) => {
-        const {data} = await movieService.getPopular()
-        const {results} = data
-        dispatch(SET_POPULAR({popular: results}))
+        try {
+            const {data} = await movieService.getPopular()
+            const {results} = data
+            dispatch(SET_POPULAR({popular: results}))
+            return
+        } catch (e: any) {
+            console.log(e.message)
+        }
     }
 )
 
-interface IByGenre{
-    genreId:string;
-    page:number;
+interface IByGenre {
+    genreId: string;
+    page: number;
 }
 
 export const getByGenre = createAsyncThunk<void, IByGenre>(
     'movieSlice/getByGenre',
     async ({genreId, page}, {dispatch}) => {
-        const {data} = await movieService.getByGenre(genreId,page)
-        dispatch(SET_MOVIES({movies:data}))
+        try {
+            const {data} = await movieService.getByGenre(genreId, page)
+            dispatch(SET_MOVIES({movies: data}))
+            return
+        } catch (e: any) {
+            console.log(e.message)
+        }
     }
 )
 
@@ -108,9 +138,11 @@ const movieReducer = movieSlice.reducer;
 
 export default movieReducer;
 
-export const {SET_MOVIES,
+export const {
+    SET_MOVIES,
     SET_TOP_RATED,
     SET_POPULAR,
     SET_MOVIE,
     PG_CHANGE,
-    SET_UPCOMING} = movieSlice.actions;
+    SET_UPCOMING
+} = movieSlice.actions;

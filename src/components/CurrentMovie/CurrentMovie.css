@@ -5,26 +5,10 @@
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    height: calc(100vh - 80px);
-    background: rgba(0, 3, 44, 0.7);
 }
-
-.bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.bg img{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
 
 .current-movie__poster img {
-    width: 450px;
+    width: 430px;
     border-radius: 10px;
 }
 

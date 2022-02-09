@@ -15,14 +15,17 @@ const initialState: IGenreState = {
 export const getAllGenres = createAsyncThunk(
     'genreSlice/getAllGenres',
     async (_, {dispatch}) => {
-        const {data} = await genreService.getAll();
-const {genres} = data
-        dispatch(SET_GENRES({genres}))
+        try {
+
+            const {data} = await genreService.getAll();
+            const {genres} = data
+            dispatch(SET_GENRES({genres}))
+            return
+        } catch (e: any){
+            console.log(e.message)
+        }
     }
 )
-
-
-
 
 const genreSlice = createSlice({
     name: 'genreSlice',

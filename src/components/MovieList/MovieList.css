@@ -27,8 +27,8 @@
     padding: 10px 20px;
     font-weight: 600;
     font-size: 18px;
-    border: 1px solid #000322;
-    box-shadow: 0 0 30px #00032c;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 3, 44, 0.7);
     cursor: pointer;
 }
 

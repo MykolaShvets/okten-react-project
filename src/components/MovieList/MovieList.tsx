@@ -3,7 +3,7 @@ import React, {FC, useEffect} from 'react';
 import './MovieList.css'
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {getByGenre, getMovies, PG_CHANGE} from "../../store/slices/movie.slice";
-import {MovieListCard} from "../MovieListCard/MovieListCard";
+import {MovieListCard} from "..";
 import {useParams} from "react-router-dom";
 
 const MovieList: FC = () => {
@@ -13,8 +13,6 @@ const MovieList: FC = () => {
     const dispatch = useAppDispatch();
 
     const {genreId} = useParams();
-
-    console.log(genreId);
 
     useEffect(() => {
         if (genreId) {

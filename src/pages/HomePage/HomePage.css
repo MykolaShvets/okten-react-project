@@ -2,6 +2,8 @@
     max-width: 1440px;
     padding: 10px;
     margin: 0 auto;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
 .home-page__wrapp h2{

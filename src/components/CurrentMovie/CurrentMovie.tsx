@@ -23,9 +23,6 @@ const CurrentMovie: FC = () => {
 
     return (
         <div className={'current-movie__wrapp'}>
-            <div className={'bg'}>
-                <img src={imageUrl + movie?.backdrop_path} alt='background'/>
-            </div>
             <div className={'current-movie__poster'}>
                 <img src={imageUrl + movie?.poster_path} alt={movie?.title}/>
             </div>

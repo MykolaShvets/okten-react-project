@@ -11,4 +11,5 @@ export * from './PopularMovies/PopularMovies';
 export * from './TopRatedMovies/TopRatedMovies';
 export * from './UpcomingMovies/UpcomingMovies';
 export * from './Slider/Slider';
+export * from './Footer/Footer';
 

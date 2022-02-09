@@ -1,8 +1,3 @@
-.header{
-
-    background: #000322;
-}
-
 .header__wrapp{
     height: 80px;
     max-width: 1440px;
@@ -11,7 +6,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: white;
 }
 
 .menu{
@@ -26,13 +20,14 @@
     font-weight: bold;
     transition: all ease .5s;
     padding: 5px 10px;
+    border-bottom: 1px solid transparent;
 }
 .menu__item a:hover{
-    color: #5468ab;
+    border-color: inherit;
 }
 
 .menu__item .active{
-    color: #5468ab;
+    border-color: inherit;
 }
 
 .header__back button{

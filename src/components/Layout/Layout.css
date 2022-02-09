@@ -1,0 +1,12 @@
+.layout__dark{
+    background: rgb(1, 5, 17);
+    color: white;
+}
+
+.layout__light{
+    background: rgba(1, 5, 17, 0.18);
+    color: #010511;
+}
+
+
+
