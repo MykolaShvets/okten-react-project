@@ -1,4 +1,4 @@
-.movies-page__wrapp{
+.movies-page__wrapp {
     max-width: 1420px;
     padding: 0 10px;
     margin: 0 auto;
@@ -6,12 +6,12 @@
     gap: 15px;
 }
 
-.movies-page__sidebar{
+.movies-page__sidebar {
     padding: 10px;
-   max-width: 200px;
+    max-width: 200px;
 }
 
-.movie-page__content{
+.movie-page__content {
     padding-top: 40px;
     max-width: 1200px;
 }

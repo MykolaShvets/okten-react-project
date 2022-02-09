@@ -1,10 +1,10 @@
 import React, {FC, useEffect} from 'react';
+import {useParams} from "react-router-dom";
 
 import './MovieList.css'
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {getByGenre, getMovies, PG_CHANGE} from "../../store/slices/movie.slice";
 import {MovieListCard} from "..";
-import {useParams} from "react-router-dom";
 
 const MovieList: FC = () => {
 
@@ -30,7 +30,8 @@ const MovieList: FC = () => {
             </div>
             <div className={'movie-list__btns'}>
                 <button onClick={() => dispatch(PG_CHANGE(1))}
-                        className={'first-pg__btn'}>1...</button>
+                        className={'first-pg__btn'}>1...
+                </button>
 
                 <button onClick={() => dispatch(PG_CHANGE(currentPg - 1))}
                         disabled={currentPg === 1}>{'<< ' + (currentPg - 1)}</button>

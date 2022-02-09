@@ -15,7 +15,6 @@ const TopRatedMovies: FC = () => {
     }, [])
 
 
-
     return (
         <div>
             <Slider movies={topRated}/>

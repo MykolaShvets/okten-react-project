@@ -1,4 +1,4 @@
-.header__wrapp{
+.header__wrapp {
     height: 80px;
     max-width: 1440px;
     margin: 0 auto;
@@ -8,28 +8,29 @@
     justify-content: space-between;
 }
 
-.menu{
+.menu {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.menu__item a{
+.menu__item a {
     font-size: 24px;
     font-weight: bold;
     transition: all ease .5s;
     padding: 5px 10px;
     border-bottom: 1px solid transparent;
 }
-.menu__item a:hover{
+
+.menu__item a:hover {
     border-color: inherit;
 }
 
-.menu__item .active{
+.menu__item .active {
     border-color: inherit;
 }
 
-.header__back button{
+.header__back button {
     font-size: 20px;
 }

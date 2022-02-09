@@ -1,4 +1,4 @@
-export interface IProdComp{
+export interface IProdComp {
     name: string;
     id: number;
     logo_path: string | null;

@@ -2,7 +2,7 @@ import React, {FC, useEffect} from 'react';
 
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {getUpcomingMovie} from "../../store/slices/movie.slice";
-import { Slider } from '../Slider/Slider';
+import {Slider} from '../Slider/Slider';
 
 const UpcomingMovies: FC = () => {
 
@@ -13,7 +13,6 @@ const UpcomingMovies: FC = () => {
     useEffect(() => {
         dispatch(getUpcomingMovie())
     }, [])
-
 
 
     return (

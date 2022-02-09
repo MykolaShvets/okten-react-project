@@ -1,16 +1,15 @@
 import React, {FC, useState} from 'react';
-import { Outlet } from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 
 import './Layout.css'
-import {Header,Footer} from "..";
-
+import {Footer, Header} from "..";
 
 
 const Layout: FC = () => {
 
     const [isLight, setIsLight] = useState(false);
 
-    const changeTheme = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const changeTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
         setIsLight(e.target.checked)
     }
 
@@ -24,7 +23,7 @@ const Layout: FC = () => {
                 <Outlet/>
             </main>
             <footer>
-                <Footer changeTheme={changeTheme} />
+                <Footer changeTheme={changeTheme}/>
             </footer>
         </div>
     );

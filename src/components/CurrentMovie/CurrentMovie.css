@@ -21,7 +21,7 @@
 }
 
 .current-movie__genres,
-.current-movie__creators{
+.current-movie__creators {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;

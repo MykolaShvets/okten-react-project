@@ -1,6 +1,6 @@
 import {IGenre, ILang, IProdComp, IProdCont} from ".";
 
-export interface IMovie{
+export interface IMovie {
     adult: boolean;
     backdrop_path: string | null;
     belongs_to_collection?: null | object;

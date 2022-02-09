@@ -1,10 +1,10 @@
-.genre-item a{
+.genre-item a {
     border-bottom: 1px solid transparent;
     transition: all ease .5s;
 }
 
 
-.genre-item a:hover{
+.genre-item a:hover {
     border-bottom-color: inherit;
 }
 

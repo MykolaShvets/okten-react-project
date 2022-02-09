@@ -1,4 +1,4 @@
-.movie-list-card__wrapp{
+.movie-list-card__wrapp {
     width: 250px;
     height: 350px;
     position: relative;
@@ -8,12 +8,12 @@
     transition: all ease .1s;
 }
 
-.movie__poster img{
+.movie__poster img {
     width: 250px;
 }
 
 
-.movie__info{
+.movie__info {
     width: 250px;
     height: 150px;
     position: absolute;
@@ -25,14 +25,14 @@
     padding: 20px;
 }
 
-.movie-list-card__wrapp:hover{
+.movie-list-card__wrapp:hover {
     box-shadow: 0 0 60px 40px rgba(4, 27, 58, 0.70);
     z-index: 2;
     transform: scale(1.1);
 }
 
 
-.movie-list-card__genres{
+.movie-list-card__genres {
     display: flex;
     align-items: center;
     gap: 2px;

@@ -1,4 +1,4 @@
-.home-page__wrapp{
+.home-page__wrapp {
     max-width: 1440px;
     padding: 10px;
     margin: 0 auto;
@@ -6,7 +6,7 @@
     overflow-y: auto;
 }
 
-.home-page__wrapp h2{
+.home-page__wrapp h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 15px;
@@ -15,7 +15,7 @@
 
 .upcoming,
 .top-rated,
-.popular{
+.popular {
     margin-top: 50px;
 
 }
